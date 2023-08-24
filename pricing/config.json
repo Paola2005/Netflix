@@ -15,9 +15,21 @@
                 "texto":"Change or cancel your plan anytime."
             }
         ]
+    },
+
+    "cuadros":{
+        "titulo1":"Basic",
+        "contenido":[
+            {
+                "precio":"$16.900",
+                "second":"/mo",
+                "text1":"Compatible on 1 devices",
+                "text2":"Watch in HD",
+                "text3":"Download on 1 devices"
+            }
+        ]
+
     }
-
-
 
 
 }
