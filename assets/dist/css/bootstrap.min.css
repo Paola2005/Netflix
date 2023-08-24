@@ -8,8 +8,8 @@
 :root,
 [data-bs-theme=light] {
     --bs-blue: #fd0d0d;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
+    --bs-indigo: #f21010;
+    --bs-purple: #c14242;
     --bs-pink: #d63384;
     --bs-red: #dc3545;
     --bs-orange: #fd7e14;
@@ -8462,9 +8462,7 @@ fieldset:disabled .btn {
     border: 0 !important
 }
 
-.border-top {
-    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important
-}
+
 
 .border-top-0 {
     border-top: 0 !important
@@ -9206,9 +9204,6 @@ fieldset:disabled .btn {
     padding-bottom: .5rem !important
 }
 
-.pb-3 {
-    padding-bottom: 1rem !important
-}
 
 .pb-4 {
     padding-bottom: 1.5rem !important
@@ -13886,6 +13881,9 @@ fieldset:disabled .btn {
     .d-print-none {
         display: none !important
     }
+
+    
+
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
