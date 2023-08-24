@@ -60,21 +60,21 @@ let columnas = async () => {
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title">
-              ${res.cuadro1.contenido.map((value) => `
-            ${value.precio} 
-            ${value.second}<br>`).join(" ")}
+                ${res.cuadro1.contenido.map((value) => `
+                  ${value.precio} 
+                  ${value.second}<br>`).join(" ")}
               
               </h1>
               <ul class="list-unstyled mt-3 mb-4">
-              ${res.cuadro1.contenido.map((value) => `
-            ${value.text1}<br>
-            ${value.text2}<br>
-            ${value.text3} <br>`)}
+                ${res.cuadro1.contenido.map((value) => `
+                  ${value.text1}<br>
+                  ${value.text2}<br>
+                  ${value.text3} <br>`)}
                 
               </ul>
               <button type="button" class="w-100 btn btn-lg btn-outline-primary">
-              ${res.cuadro1.contenido.map((value) => `
-                 ${value.textboton} <br>`).join(" ")}
+                  ${res.cuadro1.contenido.map((value) => `
+                    ${value.textboton} <br>`).join(" ")}
               </button>
             </div>
           </div>
@@ -98,8 +98,8 @@ let columnas = async () => {
        
               </ul>
               <button type="button" class="w-100 btn btn-lg btn-primary">
-              ${res.cuadro2.contenido2.map((value) => `
-                 ${value.textboton2} <br>`).join(" ")}
+                ${res.cuadro2.contenido2.map((value) => `
+                  ${value.textboton2} <br>`).join(" ")}
               </button>
             </div>
           </div>
@@ -134,3 +134,74 @@ let columnas = async () => {
     `);
 }
 columnas()
+
+let tablas = async () => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let selection = document.querySelector("#section4")
+  selection.insertAdjacentHTML("beforeend",/*html*/ ` 
+  <h2 class="display-6 text-center mb-4">
+  ${res.section4.titulo4}
+  </h2>
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th style="width: 34%;"></th>
+              <th style="width: 22%;">
+              ${res.section4.contenido4.map((value) => `
+                  ${value.title1} <br>`).join(" ")}
+              </th>
+              <th style="width: 22%;">
+              ${res.section4.contenido4.map((value) => `
+                  ${value.title2} <br>`).join(" ")}
+              </th><th style="width: 22%;">
+              ${res.section4.contenido4.map((value) => `
+                  ${value.title3} <br>`).join(" ")}
+              </th>             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">
+              ${res.section4.derecha.map((value) => `
+                  ${value.titulodere} <br>`).join(" ")}
+              </th>
+              <td><p>${res.section4.contenidos.map((value) => `
+              ${value.precios1} <br>`).join(" ")}</p></td>
+              <td><p>${res.section4.contenidos.map((value) => `
+              ${value.precios2} <br>`).join(" ")}</p></td>
+              <td><p>${res.section4.contenidos.map((value) => `
+              ${value.precios2} <br>`).join(" ")}</p></td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-start">
+              ${res.section4.derecha.map((value) => `
+              ${value.titulodere2} <br>`).join(" ")}</th>
+              <td><p>${res.section4.contenidos.map((value) => `
+              ${value.textos1} <br>`).join(" ")}</p></td>
+              <td><p>${res.section4.contenidos.map((value) => `
+              ${value.textos2} <br>`).join(" ")}</p></td>
+              <td><p>${res.section4.contenidos.map((value) => `
+              ${value.textos3} <br>`).join(" ")}</p></td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">
+              ${res.section4.derecha.map((value) => `
+              ${value.titulodere3} <br>`).join(" ")}</th>
+              <td>${res.section4.iconosabajo.map((value) => `
+              ${value.icono1}<br>`).join(" ")}</td>
+              <td>${res.section4.iconosabajo.map((value) => `
+              ${value.icono1}<br>`).join(" ")}</td>
+              <td>${res.section4.iconosabajo.map((value) => `
+              ${value.icono1}<br>`).join(" ")}</td>
+              
+          </tbody>
+        </table>
+      
+  `);
+  
+}
+tablas()

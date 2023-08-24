@@ -34,6 +34,7 @@
 
         
     },
+
     "cuadro2":{
         "titulo2":"Standard",
         "contenido2":[
@@ -52,7 +53,6 @@
 
     },
 
-
     "cuadro3":{
         "titulo3":"Premium",
         "contenido3":[
@@ -69,6 +69,39 @@
 
         ]
 
+    },
+
+    "section4": {
+        "titulo4": "Compare plans",
+        "contenido4":[
+            {
+                "title1":"Basic",
+                "title2":"Standard",
+                "title3":"Premium"
+            }
+            
+        
+        ],
+
+        "derecha":[{
+            "titulodere":"Monthly price",
+            "titulodere2":"video quality",
+            "titulodere3":"Watch Netflix on your TV, computer, cell phone and tablet"
+        }],
+
+        "contenidos":[{
+            "precios1":"16.900 COP",
+            "precios2":"26.900 COP",
+            "precios3":"30.900 COP",
+            "textos1":"Good",
+            "textos2":"Better",
+            "textos3":"Best"
+        }],
+
+        "iconosabajo":[{
+           "icono1": "<svg class='bi text-danger' width='20' height='20'><use xlink:href='#check' /></svg>"
+
+        }]   
     }
 
 
