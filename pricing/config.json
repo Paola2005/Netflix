@@ -17,7 +17,7 @@
         ]
     },
 
-    "cuadros":{
+    "cuadro1":{
         "titulo1":"Basic",
         "contenido":[
             {
@@ -25,11 +25,60 @@
                 "second":"/mo",
                 "text1":"Compatible on 1 devices",
                 "text2":"Watch in HD",
-                "text3":"Download on 1 devices"
+                "text3":"Download on 1 devices",
+                "textboton":"Sign up for free"
             }
+            
+
+        ]
+
+        
+    },
+    "cuadro2":{
+        "titulo2":"Standard",
+        "contenido2":[
+            {
+                "precio2":"$26.900",
+                "second":"/mo",
+                "text1b":"Compatible on 2 devices",
+                "text2b":"Watch in Full HD",
+                "text3b":"Download on 2 devices",
+                "textboton2":"Get started"
+                
+            }
+            
+
+        ]
+
+    },
+
+
+    "cuadro3":{
+        "titulo3":"Premium",
+        "contenido3":[
+            {
+                "precio3":"$38.900",
+                "second":"/mo",
+                "text1c":"Compatible on 4 devices",
+                "text2c":"Watch in Ultra HD",
+                "text3c":"Download on 6 devices",
+                "textboton3":"Contact us"
+                
+            }
+            
+
         ]
 
     }
 
 
+
 }
+
+
+
+    
+
+    
+
+

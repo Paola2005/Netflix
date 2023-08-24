@@ -56,57 +56,77 @@ let columnas = async () => {
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">${res.cuadros.titulo1}</h4>
+              <h4 class="my-0 fw-normal">${res.cuadro1.titulo1}</h4>
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title">
-              ${res.cuadros.contenido.map((value) => `
+              ${res.cuadro1.contenido.map((value) => `
             ${value.precio} 
             ${value.second}<br>`).join(" ")}
               
               </h1>
               <ul class="list-unstyled mt-3 mb-4">
-              ${res.cuadros.contenido.map((value) => `
+              ${res.cuadro1.contenido.map((value) => `
             ${value.text1}<br>
             ${value.text2}<br>
             ${value.text3} <br>`)}
                 
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+              ${res.cuadro1.contenido.map((value) => `
+                 ${value.textboton} <br>`).join(" ")}
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">Standard</h4>
+              <h4 class="my-0 fw-normal">${res.cuadro2.titulo2}</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$26.900<small class="text-body-secondary fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title">
+               ${res.cuadro2.contenido2.map((value) => `
+                  ${value.precio2} 
+                  ${value.second}<br>`).join(" ")}
+              </h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>Compatible on 2 devices</li>
-                <li>Watch in Full HD</li>
-                <li>Download on 2 devices</li>
+                ${res.cuadro2.contenido2.map((value) => `
+                  ${value.text1b}<br>
+                  ${value.text2b}<br>
+                  ${value.text3b} <br>`)}
        
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              <button type="button" class="w-100 btn btn-lg btn-primary">
+              ${res.cuadro2.contenido2.map((value) => `
+                 ${value.textboton2} <br>`).join(" ")}
+              </button>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm border-primary">
             <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">Premium</h4>
+              <h4 class="my-0 fw-normal">${res.cuadro3.titulo3}</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$38.900<small class="text-body-secondary fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title">
+                ${res.cuadro3.contenido3.map((value) => `
+                  ${value.precio3} 
+                  ${value.second}<br>`).join(" ")}
+
+              </h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>Compatible on 4 devices</li>
-                <li>Watch in Ultra HD</li>
-                <li>Download on 6 devices</li>
+                ${res.cuadro3.contenido3.map((value) => `
+                  ${value.text1c}<br>
+                  ${value.text2c}<br>
+                  ${value.text3c} <br>`)}
 
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+              <button type="button" class="w-100 btn btn-lg btn-primary">
+                ${res.cuadro3.contenido3.map((value) => `
+                  ${value.textboton3} <br>`).join(" ")}
+              </button>
             </div>
           </div>
         </div>
