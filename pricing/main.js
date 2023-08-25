@@ -53,86 +53,38 @@ let columnas = async () => {
     let res = await peticion.json();
     let selection = document.querySelector("#section2")
     selection.insertAdjacentHTML("beforeend",/*html*/ ` 
+    ${res.cuadro.map((value) => /*html*/`
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">${res.cuadro1.titulo1}</h4>
+              <h4 class="my-0 fw-normal">${value.titulo}</h4>
             </div>
             <div class="card-body">
               <h1 class="card-title pricing-card-title">
-                ${res.cuadro1.contenido.map((value) => `
                   ${value.precio} 
-                  ${value.second}<br>`).join(" ")}
+                  ${value.second}
               
               </h1>
               <ul class="list-unstyled mt-3 mb-4">
-                ${res.cuadro1.contenido.map((value) => `
                   ${value.text1}<br>
                   ${value.text2}<br>
-                  ${value.text3} <br>`)}
+                  ${value.text3} <br>
                 
               </ul>
               <button type="button" class="w-100 btn btn-lg btn-outline-primary">
-                  ${res.cuadro1.contenido.map((value) => `
-                    ${value.textboton} <br>`).join(" ")}
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm">
-            <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">${res.cuadro2.titulo2}</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">
-               ${res.cuadro2.contenido2.map((value) => `
-                  ${value.precio2} 
-                  ${value.second}<br>`).join(" ")}
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                ${res.cuadro2.contenido2.map((value) => `
-                  ${value.text1b}<br>
-                  ${value.text2b}<br>
-                  ${value.text3b} <br>`)}
-       
-              </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">
-                ${res.cuadro2.contenido2.map((value) => `
-                  ${value.textboton2} <br>`).join(" ")}
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">${res.cuadro3.titulo3}</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">
-                ${res.cuadro3.contenido3.map((value) => `
-                  ${value.precio3} 
-                  ${value.second}<br>`).join(" ")}
 
-              </h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                ${res.cuadro3.contenido3.map((value) => `
-                  ${value.text1c}<br>
-                  ${value.text2c}<br>
-                  ${value.text3c} <br>`)}
-
-              </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">
-                ${res.cuadro3.contenido3.map((value) => `
-                  ${value.textboton3} <br>`).join(" ")}
+                    ${value.textboton} 
               </button>
             </div>
           </div>
         </div>
-      
-    `);
+        <br>
+        
+        `).join(" ")}
+        `  )
 }
+
+
 columnas()
 
 let tablas = async () => {
@@ -140,6 +92,7 @@ let tablas = async () => {
   let res = await peticion.json();
   let selection = document.querySelector("#section4")
   selection.insertAdjacentHTML("beforeend",/*html*/ ` 
+  ${res.section4.contenido4.map((value) => `
   <h2 class="display-6 text-center mb-4">
   ${res.section4.titulo4}
   </h2>
