@@ -83,8 +83,6 @@ let columnas = async () => {
         `).join(" ")}
         `  )
 }
-
-
 columnas()
 
 let tablas = async () => {
