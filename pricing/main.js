@@ -205,3 +205,55 @@ let tablas = async () => {
   
 }
 tablas()
+
+
+let footer = async () => {
+  let peticion = await fetch(`${path}.json`);
+  let res = await peticion.json();
+  let selection = document.querySelector("#ultimo")
+  selection.insertAdjacentHTML("beforeend",/*html*/ ` 
+  <div class="row">
+  <div class="col-12 col-md">
+    ${res.ultimo.imagen.map((value) => /*html */`
+      <img src="${value.ima}" class="mb-2" style="width: 30px; height: 30px;" alt=""><br>
+    `)}
+    <small class="d-block mb-3 text-body-secondary">${res.ultimo.campus}</small>
+  </div>
+        <div class="col-6 col-md">
+          <h5>${res.ultimo.ti} </h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.netflix.com/co-en/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fyouraccount">${res.ultimo.nose}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://jobs.netflix.com/">${res.ultimo.nose1}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://devices.netflix.com/en/">${res.ultimo.nose2}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">${res.ultimo.nose3}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://fast.com/es/">${res.ultimo.nose4}</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>${res.ultimo.ti2}</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/es-es/">${res.ultimo.nose5}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://ir.netflix.net/ir-overview/profile/default.aspx">${res.ultimo.nose6}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.netflix.com/gift-cards">${res.ultimo.nose7}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/legal/privacy">${res.ultimo.nose8}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/es-es/contactus">${res.ultimo.nose9}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.netflix.com/co-en/browse/genre/839338">${res.ultimo.nose10}</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>${res.ultimo.ti2}</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/es-es/node/412">${res.ultimo.nose11}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://media.netflix.com/es_es/">${res.ultimo.nose12}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.netflix.com/co-en/redeem">${res.ultimo.nose13}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/legal/termsofuse">${res.ultimo.nose14}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/legal/corpinfo">${res.ultimo.nose15}</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://help.netflix.com/legal/notices">${res.ultimo.nose16}</a></li>
+          </ul>
+        </div>
+      </div>
+      
+  `);
+}
+
+  footer()

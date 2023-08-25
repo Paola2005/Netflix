@@ -102,11 +102,42 @@
            "icono1": "<svg class='bi text-danger' width='20' height='20'><use xlink:href='#check' /></svg>"
 
         }]   
+    },
+    
+
+    "ultimo":{
+        "imagen":[{
+            "ima":"../assets/brand/astronaut.png"
+        }],
+        "campus":"&copy; Campuslands 2023 Bucaramanga",
+        "ti":"Features",
+        "ti2":"Resources",
+        "ti3":"About",
+        "nose":"Account",
+        "nose1":"Jobs",
+        "nose2":"Ways to Watch",
+        "nose3":"Cookie Preferences",
+        "nose4":"Speed Test",
+        "nose5":"Help Center",
+        "nose6":"Investor Relations",
+        "nose7":"Buy Gift Cards",
+        "nose8":"Privacy",
+        "nose9":"Contact Us",
+        "nose10":"Only on Netflix",
+        "nose11":"FAQ",
+        "nose12":"Media Center",
+        "nose13":"Redeem Gift Cards",
+        "nose14":"Terms of Use",
+        "nose15":"Corporate Information",
+        "nose16":"Legal Notices"
+
     }
 
 
 
 }
+
+
 
 
 
