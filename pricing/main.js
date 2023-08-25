@@ -92,7 +92,6 @@ let tablas = async () => {
   let res = await peticion.json();
   let selection = document.querySelector("#section4")
   selection.insertAdjacentHTML("beforeend",/*html*/ ` 
-  ${res.section4.contenido4.map((value) => `
   <h2 class="display-6 text-center mb-4">
   ${res.section4.titulo4}
   </h2>
