@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.115.4">
+  <title>Pricing example · Bootstrap v5.3</title>
+  <script src="../assets/js/color-modes.js"></script>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link src="/pricing/pricing.css" rel="stylesheet">
+  <script src="../assets/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="main.js"></script>
+  <link rel="shortcut icon" href="../assets/brand/netflix.png">
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check" viewBox="0 0 16 16">
+      <title>Check</title>
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+  </svg>
+
+  <div class="container py-3">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="https://www.netflix.com/co/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120" viewBox="0,0,256,256">
+            <g fill="#ff0000" fill-rule="evenodd"  stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M0,19v13.41797c0.68359,-0.09766 1.41406,-0.19141 2.09375,-0.27734c0.00391,-2.80859 0.00391,-4.53125 0.00781,-7.33203c0.94141,2.75781 1.51953,4.38672 2.45312,7.00781c0.73438,-0.08203 1.54297,-0.18359 2.28125,-0.25781c0.00391,-4.1875 0.01172,-8.375 0.01953,-12.55859h-2.10547c-0.00391,2.86328 -0.00781,4.71484 -0.01172,7.57813c-0.90234,-2.79297 -1.80859,-4.64062 -2.71484,-7.57812zM8.88672,19l-0.02344,12.37891c1.94922,-0.17578 3.90234,-0.32422 5.85547,-0.4375c0.00391,-0.60156 0.00391,-1.46875 0.00391,-2.07031c-1.26953,0.07422 -2.48437,0.15625 -3.75391,0.24219c0.00391,-1.10547 0.00391,-2.02734 0.00781,-3.13281c0.92578,-0.01953 1.90234,-0.00391 2.84766,-0.01953c0,-0.60547 0.00391,-1.47656 0.00391,-2.08203c-0.9375,0.01563 -1.92578,0.01953 -2.84766,0.03516c0.00391,-1.10937 0.00391,-1.71875 0.00391,-2.82812c0.58203,-0.00781 3.26172,-0.00781 3.74609,-0.01172c0,-0.60547 -0.01172,-1.47266 -0.01172,-2.07422zM23.94141,19c0,3.88281 0,7.76953 0,11.65234c0.22656,0 0.45703,0 0.68359,0c0.46875,0 0.94141,0 1.40234,0.00391c0,-1.64844 0,-3.15234 0,-4.80078c0.11328,0 2.57422,-0.00391 2.85156,0c0,-0.58984 0,-1.46875 -0.00391,-2.05859c-0.25781,-0.00391 -2.74219,0 -2.84766,0c0,-1.0625 0,-1.66016 0,-2.71875c0.22656,0 3.20313,0 3.77344,0c0,-0.58984 -0.00391,-1.48437 -0.00391,-2.07812zM31.16797,19.01172c0.00391,3.92188 -0.01562,7.83984 -0.01172,11.76172c1.87109,0.07031 3.83984,0.14453 5.70703,0.27344c0,-0.60156 0,-1.46875 0,-2.07422c-1.18359,-0.06641 -2.41406,-0.15234 -3.59766,-0.20312c-0.00781,-3.35547 0.01172,-6.40234 0.00391,-9.75781zM38.59375,19.01172l0.02344,12.16406c0.6875,0.05469 1.39453,0.10938 2.08203,0.17188c0,-4.10937 0.00781,-8.22656 0,-12.33594zM42.5,19.01172c0.84375,2.05078 1.61328,4.10547 2.46875,6.28516c-0.88672,2.08984 -1.79297,4.16797 -2.67969,6.17188c0.73438,0.07422 1.49609,0.18359 2.23047,0.26563c0.52734,-1.29297 1.00391,-2.28906 1.53125,-3.61719c0.52734,1.41406 1.00781,2.50391 1.53125,3.96484c0.73438,0.09375 1.6875,0.23438 2.41797,0.33984c-0.88672,-2.375 -1.85937,-4.84766 -2.75,-7.09375c0.88672,-2.10547 1.79297,-4.11719 2.71875,-6.31641h-2.29687c-0.57031,1.35938 -0.96484,2.23438 -1.51172,3.53125c-0.50781,-1.34766 -0.84766,-2.22266 -1.35937,-3.53125zM16.08203,19.01172c0,0.59766 0,1.46094 0,2.0625c0.09375,-0.00391 2.11719,0.00781 2.1875,0.00781c-0.00391,3.32813 -0.00781,6.36328 -0.01172,9.69141c0.6875,-0.02734 1.42188,-0.04687 2.10547,-0.0625c0.00391,-3.30859 0.00781,-6.33203 0.01172,-9.63672c0.72656,-0.00391 1.47656,-0.00781 2.20313,-0.00781c0,-0.58984 0,-1.46484 0,-2.05469z"></path></g></g>
+            </svg>
+        </a>
+
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="https://www.netflix.com/co/login">Sing in</a>
+          
+        </nav>
+      </div>
+<!---->
+
+      <div id="myJsonSection" class="pricing-header p-3 pb-md-4 mx-auto text-start">
+        
+      </div>
+    </header>
+<!---->
+
+    <main>
+      <div id="section2" class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        
+      </div>
+<!---->
+    <div id="section4" class="table-responsive">
+      
+    </div>
+    </main>
+<!---->
+
+    <footer id="ultimo" class="pt-4 my-md-5 pt-md-5 border-top">
+      
+    </footer>
+  </div>
+  
+
+</body>
+
+</html>
