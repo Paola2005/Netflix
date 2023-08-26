@@ -57,41 +57,48 @@
 
 
 
-    "section4": [{
-        "titulo4": "Compare plans",
-                "title1":"Basic",
-                "title2":"Standard",
-                "title3":"Premium"
-            }
+    "cuadro2": {
             
+            "titulo4": "Compare plans",
+            "titulos" : [
+
+                {"titulob":"Basic"},
+                {"titulob":"Standard"},
+                {"titulob":"Premium"}
+
+            ],
+            
+            "context":[
+            {"titulodere":"Monthly price",
+            "cosa1":"16.900 COP",
+            "cosa2":"26.900 COP",
+            "cosa3":"30.900 COP"
         
-        ],
+        },
+            {"titulodere":"video quality",
+            "cosa1":"Good",
+            "cosa2":"Better",
+            "cosa3":"Best"
+        
+        },
+            {"titulodere":"Watch Netflix on your TV, computer, cell phone and tablet",
+            "cosa1":"<svg class='bi text-danger' width='20' height='20'><use xlink:href='#check' /></svg>",
+            "cosa2":"<svg class='bi text-danger' width='20' height='20'><use xlink:href='#check' /></svg>",
+            "cosa3":"<svg class='bi text-danger' width='20' height='20'><use xlink:href='#check' /></svg>"
+        
+        }
+        ]
+        
+        },
 
-        "derecha":[{
-            "titulodere":"Monthly price",
-            "titulodere2":"video quality",
-            "titulodere3":"Watch Netflix on your TV, computer, cell phone and tablet"
-        }],
-
-        "contenidos":[{
-            "precios1":"16.900 COP",
-            "precios2":"26.900 COP",
-            "precios3":"30.900 COP",
-            "textos1":"Good",
-            "textos2":"Better",
-            "textos3":"Best"
-        }],
-
-        "iconosabajo":[{
-           "icono1": "<svg class='bi text-danger' width='20' height='20'><use xlink:href='#check' /></svg>"
-
-        }] ,  
 
         "ultimo":{
             "imagen":[{
                 "ima":"../assets/brand/astronaut.png"
             }],
             "campus":"&copy; Campuslands 2023 Bucaramanga",
+
+            
             "ti":"Features",
             "ti2":"Resources",
             "ti3":"About",

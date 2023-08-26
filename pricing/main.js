@@ -87,73 +87,38 @@ columnas()
 
 let tablas = async () => {
   let peticion = await fetch(`${path}.json`);
-  let res = await peticion.json();
+  let respuesta = await peticion.json();
   let selection = document.querySelector("#section4")
-  selection.insertAdjacentHTML("beforeend",/*html*/ ` 
-  <h2 class="display-6 text-center mb-4">
-  ${res.section4.titulo4}
-  </h2>
-        <table class="table text-center">
-          <thead>
-            <tr>
-              <th style="width: 34%;"></th>
-              <th style="width: 22%;">
-              ${res.section4.contenido4.map((value) => `
-                  ${value.title1} <br>`).join(" ")}
-              </th>
-              <th style="width: 22%;">
-              ${res.section4.contenido4.map((value) => `
-                  ${value.title2} <br>`).join(" ")}
-              </th><th style="width: 22%;">
-              ${res.section4.contenido4.map((value) => `
-                  ${value.title3} <br>`).join(" ")}
-              </th>             
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" class="text-start">
-              ${res.section4.derecha.map((value) => `
-                  ${value.titulodere} <br>`).join(" ")}
-              </th>
-              <td><p>${res.section4.contenidos.map((value) => `
-              ${value.precios1} <br>`).join(" ")}</p></td>
-              <td><p>${res.section4.contenidos.map((value) => `
-              ${value.precios2} <br>`).join(" ")}</p></td>
-              <td><p>${res.section4.contenidos.map((value) => `
-              ${value.precios2} <br>`).join(" ")}</p></td>
-            </tr>
-            <tr>
-              <th scope="row" class="text-start">
-              ${res.section4.derecha.map((value) => `
-              ${value.titulodere2} <br>`).join(" ")}</th>
-              <td><p>${res.section4.contenidos.map((value) => `
-              ${value.textos1} <br>`).join(" ")}</p></td>
-              <td><p>${res.section4.contenidos.map((value) => `
-              ${value.textos2} <br>`).join(" ")}</p></td>
-              <td><p>${res.section4.contenidos.map((value) => `
-              ${value.textos3} <br>`).join(" ")}</p></td>
-            </tr>
-          </tbody>
+  selection.insertAdjacentHTML("beforeend",/*html*/ `
+  <h2 class="display-6 text-center mb-4">${respuesta.cuadro2.titulo4}</h2>
+  <table class="table text-center">
+  <thead>
+  <tr>
+  <th style="width: 34%;"></th>
+  ${respuesta.cuadro2.titulos.map((evaluar) => /*html*/`
+      <th style="width: 22%;">${evaluar.titulob}</th>
+      `).join(" ")}
+    </tr>
+  </thead>
+  <tbody>
+  ${respuesta.cuadro2.context.map((evaluar) => /*html*/`
+    <tr>
+      <th scope="row" class="text-start">
+      ${evaluar.titulodere}
+      </th>
+      <td><p>${evaluar.cosa1}</p></td>
+      <td><p>${evaluar.cosa2}</p></td>
+      <td><p>${evaluar.cosa3}</p></td>`).join(" ")}
+    </tr>
+  </tbody>
 
-          <tbody>
-            <tr>
-              <th scope="row" class="text-start">
-              ${res.section4.derecha.map((value) => `
-              ${value.titulodere3} <br>`).join(" ")}</th>
-              <td>${res.section4.iconosabajo.map((value) => `
-              ${value.icono1}<br>`).join(" ")}</td>
-              <td>${res.section4.iconosabajo.map((value) => `
-              ${value.icono1}<br>`).join(" ")}</td>
-              <td>${res.section4.iconosabajo.map((value) => `
-              ${value.icono1}<br>`).join(" ")}</td>
-              
-          </tbody>
-        </table>
-      
-  `);
-  
+</table>
+        
+        
+        
+        `  )
 }
+
 tablas()
 
 
@@ -169,6 +134,7 @@ let footer = async () => {
     `)}
     <small class="d-block mb-3 text-body-secondary">${res.ultimo.campus}</small>
   </div>
+  
         <div class="col-6 col-md">
           <h5>${res.ultimo.ti} </h5>
           <ul class="list-unstyled text-small">
